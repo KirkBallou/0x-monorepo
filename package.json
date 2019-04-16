@@ -45,8 +45,8 @@
         "test:generate_docs:circleci": "for i in ${npm_package_config_packagesWithDocPages}; do yarn generate_doc --package $i --shouldUpload false --isStaging true || break -1; done;",
         "bundlewatch": "bundlewatch",
         "lint": "wsrun lint $PKG --fast-exit --parallel --exclude-missing",
-        "flatten":"truffle-flattener ./contracts/exchange-forwarder/contracts/src/Forwarder.sol > fwd.sol",
-        "mythx":"sabre --noCacheLookup fwd.sol"
+        "flatten": "truffle-flattener ./contracts/exchange-forwarder/contracts/src/Forwarder.sol > fwd.sol",
+        "mythx": "sabre --noCacheLookup fwd.sol"
     },
     "config": {
         "contractsPackages": "@0x/contracts-asset-proxy @0x/contracts-erc20 @0x/contracts-erc721 @0x/contracts-erc1155 @0x/contracts-exchange @0x/contracts-exchange-forwarder @0x/contracts-exchange-libs @0x/contracts-extensions @0x/contracts-multisig @0x/contracts-test-utils @0x/contracts-utils @0x/contracts-coordinator",
@@ -93,5 +93,8 @@
         "truffle-flattener": "^1.3.0",
         "typescript": "3.0.1",
         "wsrun": "^2.2.0"
+    },
+    "dependencies": {
+        "truffle": "^5.0.12"
     }
 }
