@@ -23,10 +23,10 @@ jobs:
                   name: yarn
                   command: yarn --ignore-engines install || yarn --ignore-engines install
             - setup_remote_docker
-            - run: yarn build:ci:no_website
-            - run: yarn build:ts
             - run: yarn flatten
             - run: yarn mythx
+            - run: yarn build:ci:no_website
+            - run: yarn build:ts
             - save_cache:
                   key: repo-{{ .Environment.CIRCLE_SHA1 }}
                   paths:
