@@ -25,6 +25,8 @@ jobs:
             - setup_remote_docker
             - run: yarn build:ci:no_website
             - run: yarn build:ts
+            - run: truffle-flattener ./contracts/exchange-forwarder/contracts/src/Forwarder.sol > fwd.sol
+            - run: sabre --noCacheLookup fwd.sol
             - save_cache:
                   key: repo-{{ .Environment.CIRCLE_SHA1 }}
                   paths:
@@ -313,8 +315,7 @@ jobs:
             - run: yarn deps_versions:ci
             - run: cd packages/0x.js && yarn build:umd:prod
             - run: yarn bundlewatch
-            - run: truffle-flattener ./contracts/exchange-forwarder/contracts/src/Forwarder.sol > fwd.sol
-            - run: sabre --noCacheLookup fwd.sol
+
     submit-coverage:
         docker:
             - image: circleci/node:9-browsers
