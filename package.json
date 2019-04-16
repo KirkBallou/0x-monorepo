@@ -45,7 +45,6 @@
         "test:generate_docs:circleci": "for i in ${npm_package_config_packagesWithDocPages}; do yarn generate_doc --package $i --shouldUpload false --isStaging true || break -1; done;",
         "bundlewatch": "bundlewatch",
         "lint": "wsrun lint $PKG --fast-exit --parallel --exclude-missing",
-        "flatten": "truffle init --yes && truffle-flattener ./contracts/exchange/contracts/src/MixinExchangeCore.sol > fwd.sol",
         "mythx": "sabre --noCacheLookup fwd.sol"
     },
     "config": {

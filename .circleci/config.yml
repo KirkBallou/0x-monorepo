@@ -23,7 +23,6 @@ jobs:
                   name: yarn
                   command: yarn --ignore-engines install || yarn --ignore-engines install
             - setup_remote_docker
-            - run: yarn flatten
             - run: yarn mythx
             - run: yarn build:ci:no_website
             - run: yarn build:ts
