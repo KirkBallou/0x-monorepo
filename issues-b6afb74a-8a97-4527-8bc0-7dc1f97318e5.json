@@ -1,0 +1,104 @@
+{
+    "elapsed": 50987,
+    "issues": [
+        {
+            "issues": [
+                {
+                    "swcID": "SWC-101",
+                    "swcTitle": "Integer Overflow and Underflow",
+                    "description": {
+                        "head": "The binary multiplication can overflow.",
+                        "tail": "The operands of the multiplication operation are not sufficiently constrained. The multiplication could therefore result in an integer overflow. Prevent the overflow by checking inputs or ensure sure that the overflow is caught by an assertion."
+                    },
+                    "severity": "High",
+                    "locations": [
+                        {
+                            "sourceMap": "558:27:0"
+                        }
+                    ],
+                    "extra": {
+                        "testCase": {
+                            "initialState": {
+                                "accounts": null
+                            },
+                            "steps": null
+                        }
+                    }
+                },
+                {
+                    "swcID": "SWC-103",
+                    "swcTitle": "Floating Pragma",
+                    "description": {
+                        "head": "A floating pragma is set.",
+                        "tail": "It is recommended to make a conscious choice on what version of Solidity is used for compilation. Currently any version equal or greater than \"0.4.21\" is allowed."
+                    },
+                    "severity": "Medium",
+                    "locations": [
+                        {
+                            "sourceMap": "99:24:0"
+                        }
+                    ],
+                    "extra": {
+                        "testCase": {
+                            "initialState": {
+                                "accounts": null
+                            },
+                            "steps": null
+                        }
+                    }
+                },
+                {
+                    "swcID": "SWC-118",
+                    "swcTitle": "Incorrect Constructor Name",
+                    "description": {
+                        "head": "Potential incorrect constructor name \"TokenSaleChallenge\".",
+                        "tail": "Until Solidity version 0.4.21 a constructor can only be defined as a function that has the same name as the contract \"TokenSaleChallenge\". It has been found that there is a function with a very similar name \"TokenSaleChallenge\" that only deviates based lower/upper case characters."
+                    },
+                    "severity": "Medium",
+                    "locations": [
+                        {
+                            "sourceMap": "258:106:0"
+                        }
+                    ],
+                    "extra": {
+                        "testCase": {
+                            "initialState": {
+                                "accounts": null
+                            },
+                            "steps": null
+                        }
+                    }
+                }
+            ],
+            "sourceType": "solidity-file",
+            "sourceFormat": "text",
+            "sourceList": [
+                "./test.sol"
+            ],
+            "meta": {
+                "coveredInstructions": 0,
+                "coveredPaths": 0,
+                "logs": [
+                    {
+                        "level": "info",
+                        "msg": "skipped automated fuzz testing due to incompatible bytecode input"
+                    }
+                ],
+                "selectedCompiler": "Unknown"
+            }
+        }
+    ],
+    "status": {
+        "apiVersion": "v1.4.14",
+        "harveyVersion": "0.0.18",
+        "maestroVersion": "1.2.10",
+        "maruVersion": "0.4.3",
+        "mythrilVersion": "0.20.4",
+        "queueTime": 7400,
+        "runTime": 35600,
+        "status": "Finished",
+        "submittedAt": "2019-04-16T23:18:26.610Z",
+        "submittedBy": "5cb5ec33817b5d0010b49c07",
+        "uuid": "b6afb74a-8a97-4527-8bc0-7dc1f97318e5"
+    }
+}

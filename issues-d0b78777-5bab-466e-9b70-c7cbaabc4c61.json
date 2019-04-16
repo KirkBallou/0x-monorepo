@@ -1,0 +1,76 @@
+{
+    "elapsed": 6525,
+    "issues": [
+        {
+            "issues": [
+                {
+                    "swcID": "SWC-103",
+                    "swcTitle": "Floating Pragma",
+                    "description": {
+                        "head": "No pragma is set.",
+                        "tail": "It is recommended to make a conscious choice on what version of Solidity is used for compilation. Currently no version is set in the Solidity file."
+                    },
+                    "severity": "Medium",
+                    "locations": [
+                        {
+                            "sourceMap": "0:0:0"
+                        }
+                    ],
+                    "extra": {
+                        "testCase": {
+                            "initialState": {
+                                "accounts": null
+                            },
+                            "steps": null
+                        }
+                    }
+                },
+                {
+                    "swcID": "SWC-119",
+                    "swcTitle": "Shadowing State Variables",
+                    "description": {
+                        "head": "State variable shadows another state variable.",
+                        "tail": "The state variable \"hardcap\" in contract \"Tokensale\" shadows another state variable with the same name \"hardcap\" in contract \"Presale\"."
+                    },
+                    "severity": "Medium",
+                    "locations": [
+                        {
+                            "sourceMap": "25:26:0"
+                        }
+                    ],
+                    "extra": {
+                        "testCase": {
+                            "initialState": {
+                                "accounts": null
+                            },
+                            "steps": null
+                        }
+                    }
+                }
+            ],
+            "sourceType": "solidity-file",
+            "sourceFormat": "text",
+            "sourceList": [
+                "./test.sol"
+            ],
+            "meta": {
+                "coveredInstructions": 62,
+                "coveredPaths": 4,
+                "selectedCompiler": "Unknown"
+            }
+        }
+    ],
+    "status": {
+        "apiVersion": "v1.4.14",
+        "harveyVersion": "0.0.18",
+        "maestroVersion": "1.2.10",
+        "maruVersion": "0.4.3",
+        "mythrilVersion": "0.20.4",
+        "queueTime": 863,
+        "runTime": -863,
+        "status": "Finished",
+        "submittedAt": "2019-04-16T23:09:22.587Z",
+        "submittedBy": "5cb5ec33817b5d0010b49c07",
+        "uuid": "d0b78777-5bab-466e-9b70-c7cbaabc4c61"
+    }
+}
