@@ -25,8 +25,8 @@ jobs:
             - setup_remote_docker
             - run: yarn build:ci:no_website
             - run: yarn build:ts
-            - run: truffle-flattener ./contracts/exchange-forwarder/contracts/src/Forwarder.sol > fwd.sol
-            - run: sabre --noCacheLookup fwd.sol
+            - run: yarn flatten
+            - run: yarn mythx
             - save_cache:
                   key: repo-{{ .Environment.CIRCLE_SHA1 }}
                   paths:
